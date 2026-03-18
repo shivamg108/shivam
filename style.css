@@ -231,6 +231,45 @@ ul {
 }
 
 @media (max-width: 992px) {
+
+    #navbar .container{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:fixed;
+        top:0;
+        right:-100%;
+        width:75%;
+        height:100vh;
+        background:white;
+        flex-direction:column;
+        justify-content:flex-start;
+        align-items:center;
+        transition:0.3s;
+        padding-top:80px;
+    }
+
+    .nav-links.active{
+        right:0;
+    }
+
+    .nav-item{
+        margin:20px 0;
+    }
+
+    .nav-link{
+        font-size:20px;
+    }
+}
+
+@media (max-width: 992px) {
     #navbar .container {
         display: flex;
         justify-content: space-between;
@@ -264,7 +303,7 @@ ul {
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        padding-top: 6rem;
+        padding-top: 80px;
         box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
         transition: right 0.3s ease;
         z-index: 1000;
@@ -306,7 +345,8 @@ ul {
         background: white;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 80px;
         box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
         transition: right 0.3s ease;
         z-index: 1000;
@@ -755,23 +795,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-    #navbar .container {
-        flex-direction: column;
-        padding: 1rem;
-    }
-
-    #navbar ul {
-        margin-top: 1rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #navbar ul li a {
-        padding: 0.5rem;
-        margin: 0.25rem;
-        font-size: 0.9rem;
-    }
-
     .hero {
         text-align: center;
         padding-top: 6rem;

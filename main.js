@@ -1,20 +1,13 @@
 const yearElement = document.getElementById('year');
-const navLinks = document.querySelectorAll('.nav-link');
+const navLinkItems = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
-const menuBtn = document.querySelector('.menu-btn');
-const navLinksContainer = document.querySelector('.nav-links');
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
 
-function toggleMenu() {
-    menuBtn.classList.toggle('open');
-    navLinksContainer.classList.toggle('active');
-    document.body.classList.toggle('no-scroll');
-}
-
-function closeMenu() {
-    menuBtn.classList.remove('open');
-    navLinksContainer.classList.remove('active');
-    document.body.classList.remove('no-scroll');
-}
+menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("open");
+    navLinks.classList.toggle("active");
+});
 
 const currentYear = new Date().getFullYear();
 yearElement.textContent = currentYear;
@@ -31,7 +24,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 top: targetElement.offsetTop - 80,
                 behavior: 'smooth'
             });
-            navLinks.forEach(link => link.classList.remove('active'));
+            navLinkItems.forEach(link => link.classList.remove('active'));
             this.classList.add('active');
         }
     });
@@ -95,9 +88,11 @@ function init() {
     } else {
         document.querySelector('.nav-link[href="#home"]').classList.add('active');
     }
-    menuBtn.addEventListener('click', toggleMenu);
-    navLinks.forEach(link => {
-        link.addEventListener('click', closeMenu);
+    navLinkItems.forEach(link => {
+        link.addEventListener('click', () => {
+            menuBtn.classList.remove('open');
+            navLinks.classList.remove('active');
+        });
     });
     window.addEventListener('scroll', highlightActiveSection);
     document.querySelectorAll('.project-card').forEach(card => {
