@@ -1,6 +1,6 @@
 const yearElement = document.getElementById('year');
 const navLinkItems = document.querySelectorAll('.nav-link');
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section, header');
 const menuBtn = document.querySelector(".menu-btn");
 const navLinks = document.querySelector(".nav-links");
 
@@ -33,15 +33,18 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 function highlightActiveSection() {
     const scrollPosition = window.scrollY + 100;
     sections.forEach(section => {
+        if (!section.hasAttribute('id')) return;
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute('id');
         
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            document.querySelector(`nav a[href="#${sectionId}"]`).classList.add('active');
-        } else {
-            const navLink = document.querySelector(`nav a[href="#${sectionId}"]`);
-            if (navLink) navLink.classList.remove('active');
+        const navLink = document.querySelector(`nav a[href="#${sectionId}"]`);
+        if (navLink) {
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                navLink.classList.add('active');
+            } else {
+                navLink.classList.remove('active');
+            }
         }
     });
 }
@@ -83,10 +86,12 @@ function init() {
     if (window.location.hash) {
         const targetElement = document.querySelector(window.location.hash);
         if (targetElement) {
-            document.querySelector(`.nav-link[href="${window.location.hash}"]`).classList.add('active');
+            const navLink = document.querySelector(`.nav-link[href="${window.location.hash}"]`);
+            if (navLink) navLink.classList.add('active');
         }
     } else {
-        document.querySelector('.nav-link[href="#home"]').classList.add('active');
+        const homeLink = document.querySelector('.nav-link[href="#home"]');
+        if (homeLink) homeLink.classList.add('active');
     }
     navLinkItems.forEach(link => {
         link.addEventListener('click', () => {
