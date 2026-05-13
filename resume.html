@@ -110,9 +110,15 @@
         }
 
         .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            display: flex;
+            flex-wrap: wrap;
             gap: 0.5rem;
+        }
+
+        .skill-category h3 {
+            font-size: 0.95rem;
+            color: #444;
+            margin: 0.8rem 0 0.4rem 0;
         }
 
         .skill-tag {
@@ -238,7 +244,7 @@
 
         <div class="resume-header">
             <h1>Shivam Gupta</h1>
-            <p>Junior Full-Stack Developer | React | Python Flask | PostgreSQL | REST APIs</p>
+            <p>Full-Stack Developer | React | Python Flask | PostgreSQL | REST APIs</p>
             <div class="contact-info">
                 <a href="tel:+918108383003">
                     <i class="fas fa-phone"></i> +91 8108383003
@@ -247,13 +253,13 @@
                     <i class="fas fa-envelope"></i> shivamg8355@gmail.com
                 </a>
                 <a href="https://github.com/shivamg108" target="_blank">
-                    <i class="fab fa-github"></i> github.com/shivamg108
+                    <i class="fab fa-github"></i> https://github.com/shivamg108
                 </a>
                 <a href="https://www.linkedin.com/in/shivam-gupta-35264a30b" target="_blank">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
                 <a href="https://shivamg108.github.io/portfolio-shivam/" target="_blank">
-                    <i class="fas fa-globe"></i> Portfolio
+                    <i class="fas fa-globe"></i> https://shivamg108.github.io/portfolio-shivam/
                 </a>
             </div>
         </div>
@@ -261,48 +267,73 @@
         <div class="resume-section">
             <h2>Professional Summary</h2>
             <p>
-                Full-Stack Developer with a B.Sc. in Information Technology and experience building secure,
-                scalable web applications. Developed enterprise-level systems including HRMS and product
-                management platforms with JWT authentication and role-based access control. Skilled in
-                React, Python Flask, and PostgreSQL with hands-on experience across the full development
-                lifecycle from development to deployment. Passionate about building efficient, secure,
-                and user-friendly applications that improve business operations.
+                Full-Stack Developer with hands-on experience building secure and scalable web applications using React,
+                Python Flask, PostgreSQL, and REST APIs. Developed enterprise-level systems including HRMS and product
+                management platforms with JWT authentication, role-based access control, and image processing workflows.
+                Skilled in backend development, frontend integration, database design, security implementation, and
+                deployment.
             </p>
         </div>
 
 
         <div class="resume-section">
             <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-tag">React</div>
-                <div class="skill-tag">JavaScript (ES6)</div>
-                <div class="skill-tag">HTML5</div>
-                <div class="skill-tag">CSS3</div>
-                <div class="skill-tag">Bootstrap</div>
-                <div class="skill-tag">Material UI</div>
-
-                <div class="skill-tag">Python</div>
-                <div class="skill-tag">Flask</div>
-                <div class="skill-tag">Express.js</div>
-                <div class="skill-tag">REST APIs</div>
-
-                <div class="skill-tag">PostgreSQL</div>
-                <div class="skill-tag">SQLAlchemy</div>
-
-                <div class="skill-tag">JWT Authentication</div>
-                <div class="skill-tag">bcrypt</div>
-                <div class="skill-tag">CORS</div>
-
-                <div class="skill-tag">Git</div>
-                <div class="skill-tag">GitHub</div>
-                <div class="skill-tag">Postman</div>
-
-                <div class="skill-tag">Pillow</div>
-                <div class="skill-tag">Pandas</div>
-                <div class="skill-tag">XlsxWriter</div>
-
-                <div class="skill-tag">TrueNAS</div>
-                <div class="skill-tag">Waitress</div>
+            <div class="skill-category">
+                <h3>Frontend:</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">React.js</div>
+                    <div class="skill-tag">JavaScript (ES6)</div>
+                    <div class="skill-tag">HTML5</div>
+                    <div class="skill-tag">CSS3</div>
+                    <div class="skill-tag">Bootstrap</div>
+                    <div class="skill-tag">Material UI</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Backend:</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">Django</div>
+                    <div class="skill-tag">Django REST Framework (Basic)</div>
+                    <div class="skill-tag">Flask</div>
+                    <div class="skill-tag">REST APIs</div>
+                    <div class="skill-tag">JWT Authentication</div>
+                    <div class="skill-tag">SQLAlchemy</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Database:</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">PostgreSQL</div>
+                    <div class="skill-tag">SQL</div>
+                    <div class="skill-tag">Database Design</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Deployment:</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">Git</div>
+                    <div class="skill-tag">GitHub</div>
+                    <div class="skill-tag">Postman</div>
+                    <div class="skill-tag">Waitress</div>
+                    <div class="skill-tag">TrueNAS</div>
+                    <div class="skill-tag">Linux Basics</div>
+                    <div class="skill-tag">Environment Variables</div>
+                    <div class="skill-tag">Production Deployment</div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Security & Concepts:</h3>
+                <div class="skills-grid">
+                    <div class="skill-tag">Role-Based Access Control</div>
+                    <div class="skill-tag">Authentication & Authorization</div>
+                    <div class="skill-tag">RESTful API Design</div>
+                    <div class="skill-tag">Input Validation</div>
+                    <div class="skill-tag">API Security</div>
+                    <div class="skill-tag">System Design</div>
+                    <div class="skill-tag">bcrypt</div>
+                    <div class="skill-tag">CORS</div>
+                </div>
             </div>
         </div>
         <div class="resume-section">
@@ -310,26 +341,23 @@
             <div class="resume-item">
                 <h3>AU Finja Jewels</h3>
                 <div class="date">2025 - Present</div>
-                <p><strong>Junior Full-Stack Developer (Python / Flask)</strong></p>
+                <p><strong>Full-Stack Developer (Python / Flask)</strong></p>
                 <ul>
                     <li>
-                        Developing and maintaining internal business applications for jewelry inventory and
-                        operations management.
+                        Developing and maintaining internal business applications for inventory and operations
+                        management.
                     </li>
                     <li>
-                        Building secure backend REST APIs using Python Flask and integrating them with
-                        frontend interfaces.
+                        Building scalable REST APIs using Python Flask and integrating them with frontend systems.
                     </li>
                     <li>
-                        Designing relational database structures and managing data using PostgreSQL.
+                        Designing PostgreSQL database structures and optimizing business workflows.
                     </li>
                     <li>
-                        Implementing authentication, input validation, and role-based access control for
-                        secure system access.
+                        Implementing JWT authentication, RBAC authorization, and API validation.
                     </li>
                     <li>
-                        Handling the full software development lifecycle including requirement analysis,
-                        development, testing, and deployment.
+                        Handling development, testing, debugging, and deployment processes.
                     </li>
                 </ul>
             </div>
@@ -337,8 +365,8 @@
         <div class="resume-section">
             <h2>Projects</h2>
             <div class="resume-item">
-                <h3>Full-Stack HRMS (Commercial Project - In Development)</h3>
-                <div class="date">2025 - Present</div>
+                <h3>Full-Stack HRMS</h3>
+                <div class="date">Work In Progress</div>
                 <ul>
                     <li>
                         Developing a comprehensive Human Resource Management System to streamline
@@ -369,8 +397,8 @@
                 <div class="date">2025 - Completed</div>
                 <ul>
                     <li>
-                        Developed a full-stack web application for automated batch image renaming
-                        and product management.
+                        Developed a full-stack web application for automated batch processing and management of product
+                        images.
                     </li>
                     <li>
                         Built secure REST APIs using Python Flask with JWT authentication,
@@ -399,10 +427,6 @@
                 <div class="date">2024 - 2025</div>
                 <ul>
                     <li>
-                        Developed a Human Resource Management System for managing employee data
-                        and organizational workflows.
-                    </li>
-                    <li>
                         Implemented employee management features with role-based access control.
                     </li>
                     <li>
@@ -414,6 +438,18 @@
                 </ul>
             </div>
         </div>
+        <div class="resume-section">
+            <h2>Key Highlights</h2>
+            <div class="resume-item">
+                <ul>
+                    <li>Developed secure HRMS systems with JWT authentication and RBAC</li>
+                    <li>Built REST APIs using Flask and PostgreSQL</li>
+                    <li>Experience with frontend, backend, database, and deployment workflows</li>
+                    <li>Implemented image processing automation using Pillow</li>
+                </ul>
+            </div>
+        </div>
+
         <div class="resume-section">
             <h2>Education</h2>
             <div class="resume-item">
@@ -431,12 +467,6 @@
                 <div class="date">2018</div>
                 <p>Maharashtra State Board (VPS School, Vikhroli)</p>
             </div>
-        </div>
-        <div class="print-only">
-            <p>References available upon request.</p>
-            <p style="margin-top:10px;">
-                <strong>Portfolio:</strong> shivamg108.github.io/portfolio-shivam/
-            </p>
         </div>
     </div>
     <div class="no-print" style="text-align:center; margin:2rem 0 0;">
