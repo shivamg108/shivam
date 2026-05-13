@@ -109,27 +109,15 @@
             margin-bottom: 0.2rem;
         }
 
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
+        .skill-category {
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
         }
 
-        .skill-category h3 {
+        .skill-category strong {
+            color: var(--primary-color);
             font-size: 0.95rem;
-            color: #444;
-            margin: 0.8rem 0 0.4rem 0;
-        }
-
-        .skill-tag {
-            background: var(--light-gray);
-            border: 1px solid #ddd;
-            color: #333;
-            padding: 0.3rem 0.5rem;
-            border-radius: 4px;
-            text-align: center;
-            font-size: 0.85rem;
-            font-weight: 600;
+            margin-right: 0.3rem;
         }
 
         .btn {
@@ -196,11 +184,6 @@
                 text-decoration: none;
             }
 
-            .skill-tag {
-                background: var(--primary-color) !important;
-                border: 1px solid var(--primary-color) !important;
-                color: white !important;
-            }
 
             .no-print {
                 display: none !important;
@@ -221,12 +204,14 @@
                 color: inherit;
             }
 
-            .resume-item {
-                break-inside: avoid;
+            h2,
+            h3 {
+                break-after: avoid;
             }
 
-            h2 {
-                break-after: avoid;
+            li,
+            .skill-category {
+                break-inside: avoid;
             }
         }
 
@@ -279,61 +264,25 @@
         <div class="resume-section">
             <h2>Technical Skills</h2>
             <div class="skill-category">
-                <h3>Frontend:</h3>
-                <div class="skills-grid">
-                    <div class="skill-tag">React.js</div>
-                    <div class="skill-tag">JavaScript (ES6)</div>
-                    <div class="skill-tag">HTML5</div>
-                    <div class="skill-tag">CSS3</div>
-                    <div class="skill-tag">Bootstrap</div>
-                    <div class="skill-tag">Material UI</div>
-                </div>
+                <strong>Frontend:</strong> React.js, JavaScript (ES6), HTML5, CSS3, Bootstrap, Material UI
             </div>
             <div class="skill-category">
-                <h3>Backend:</h3>
-                <div class="skills-grid">
-                    <div class="skill-tag">Python</div>
-                    <div class="skill-tag">Django</div>
-                    <div class="skill-tag">Django REST Framework (Basic)</div>
-                    <div class="skill-tag">Flask</div>
-                    <div class="skill-tag">REST APIs</div>
-                    <div class="skill-tag">JWT Authentication</div>
-                    <div class="skill-tag">SQLAlchemy</div>
-                </div>
+                <strong>Backend:</strong> Python, Django, Django REST Framework (Basic), Flask, REST APIs, JWT
+                Authentication, SQLAlchemy
             </div>
             <div class="skill-category">
-                <h3>Database:</h3>
-                <div class="skills-grid">
-                    <div class="skill-tag">PostgreSQL</div>
-                    <div class="skill-tag">SQL</div>
-                    <div class="skill-tag">Database Design</div>
-                </div>
+                <strong>Database:</strong> PostgreSQL, SQL, Database Design
             </div>
             <div class="skill-category">
-                <h3>Tools & Deployment:</h3>
-                <div class="skills-grid">
-                    <div class="skill-tag">Git</div>
-                    <div class="skill-tag">GitHub</div>
-                    <div class="skill-tag">Postman</div>
-                    <div class="skill-tag">Waitress</div>
-                    <div class="skill-tag">TrueNAS</div>
-                    <div class="skill-tag">Linux Basics</div>
-                    <div class="skill-tag">Environment Variables</div>
-                    <div class="skill-tag">Production Deployment</div>
-                </div>
+                <strong>Tools & Deployment:</strong> Git, GitHub, Postman, Waitress, TrueNAS, Linux Basics, Environment
+                Variables, Production Deployment
             </div>
             <div class="skill-category">
-                <h3>Security & Concepts:</h3>
-                <div class="skills-grid">
-                    <div class="skill-tag">Role-Based Access Control</div>
-                    <div class="skill-tag">Authentication & Authorization</div>
-                    <div class="skill-tag">RESTful API Design</div>
-                    <div class="skill-tag">Input Validation</div>
-                    <div class="skill-tag">API Security</div>
-                    <div class="skill-tag">System Design</div>
-                    <div class="skill-tag">bcrypt</div>
-                    <div class="skill-tag">CORS</div>
-                </div>
+                <strong>Security & Concepts:</strong> Role-Based Access Control, Authentication & Authorization, RESTful
+                API Design, Input Validation, API Security, System Design, bcrypt, CORS
+            </div>
+            <div class="skill-category">
+                <strong>AI & Emerging Tech:</strong> Prompt Engineering, AI-Assisted Development
             </div>
         </div>
         <div class="resume-section">
@@ -341,20 +290,20 @@
             <div class="resume-item">
                 <h3>AU Finja Jewels</h3>
                 <div class="date">2025 - Present</div>
-                <p><strong>Full-Stack Developer (Python / Flask)</strong></p>
+                <p><strong>Software Developer (Python / Django / Flask)</strong></p>
                 <ul>
                     <li>
-                        Developing and maintaining internal business applications for inventory and operations
-                        management.
+                        Developing and maintaining internal business applications for operations and management.
                     </li>
                     <li>
-                        Building scalable REST APIs using Python Flask and integrating them with frontend systems.
+                        Building scalable REST APIs using Python Django/DRF/Flask/FastAPI and integrating them with
+                        frontend systems.
                     </li>
                     <li>
                         Designing PostgreSQL database structures and optimizing business workflows.
                     </li>
                     <li>
-                        Implementing JWT authentication, RBAC authorization, and API validation.
+                        Implementing JWT authentication, RBAC authorization, and API security.
                     </li>
                     <li>
                         Handling development, testing, debugging, and deployment processes.
@@ -365,7 +314,40 @@
         <div class="resume-section">
             <h2>Projects</h2>
             <div class="resume-item">
-                <h3>Full-Stack HRMS</h3>
+                <h3>E-commerce</h3>
+                <div class="date">Work In Progress</div>
+                <ul>
+                    <li>
+                        Developing a comprehensive E-commerce system to streamline
+                        business processes.
+                    </li>
+                    <li>
+                        Implemented modules for product management, user management,
+                        order management, and payment management.
+                    </li>
+                    <li>
+                        Created a role-based dashboard with dynamic role assignment based on user permissions (Admin,
+                        Buyer, Seller).
+                    </li>
+                    <li>
+                        Implemented advanced security including JWT dual-token authentication,
+                        bcrypt password hashing, Role-Based Access Control, and Email Verification.
+                    </li>
+                    <li>
+                        Applied security best practices including CORS protection,
+                        input validation, and secure cookie handling.
+                    </li>
+                    <li>
+                        Developing upcoming features including Mobile Number Verification and AI-driven product
+                        recommendations.
+                    </li>
+                    <li>
+                        Technologies: React, TailwindCSS, Python, Django Rest Framework, PostgreSQL
+                    </li>
+                </ul>
+            </div>
+            <div class="resume-item">
+                <h3>AU Finja Jewels HRMS</h3>
                 <div class="date">Work In Progress</div>
                 <ul>
                     <li>
@@ -393,7 +375,7 @@
                 </ul>
             </div>
             <div class="resume-item">
-                <h3>Full-Stack Product Management & Image Processing System</h3>
+                <h3>AU Finja Jewels - Product Management & Image Processing System</h3>
                 <div class="date">2025 - Completed</div>
                 <ul>
                     <li>
@@ -413,7 +395,7 @@
                         for product and inventory management.
                     </li>
                     <li>
-                        Created a dynamic React-based frontend with Material UI and interactive
+                        Created a dynamic responsive React-based frontend with bootstrap and interactive
                         image gallery functionality.
                     </li>
                     <li>
@@ -442,10 +424,12 @@
             <h2>Key Highlights</h2>
             <div class="resume-item">
                 <ul>
-                    <li>Developed secure HRMS systems with JWT authentication and RBAC</li>
-                    <li>Built REST APIs using Flask and PostgreSQL</li>
-                    <li>Experience with frontend, backend, database, and deployment workflows</li>
-                    <li>Implemented image processing automation using Pillow</li>
+                    <li>Developed secure enterprise applications (E-commerce, HRMS) with JWT authentication and RBAC
+                    </li>
+                    <li>Built scalable REST APIs using Python (Django, DRF, Flask, FastAPI) and PostgreSQL</li>
+                    <li>Full-stack experience across frontend, backend, database design, and deployment workflows</li>
+                    <li>Integrating advanced features including image processing, AI suggestions, and mobile
+                        verification</li>
                 </ul>
             </div>
         </div>
